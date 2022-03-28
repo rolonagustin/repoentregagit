@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+*{
+	font-family: 'Roboto', sans-serif;
+	margin: 15px;
+	padding: 0;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	background-image: url(../img/square.png);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
+	margin-bottom:100px;
+
+}
+main{
+	font-size: 2rem;
+	color: navajowhite;
+
+}
+
+.encabezado{
+	display: flex;
+}
+
+
+/*selectores de etiquetas*/
+h1,h2,h3{
+	color: navajowhite;
+}
+section article	p{color: grey;
+font-size: 2rem;
+font-weight: 300;
+line-height: 2.4rem;
+
+}
+h1{
+	font-size: 3rem;
+}
+h2{
+	text-align: center;
+	font-size: 3rem;
+}
+h1{
+	text-align: center;
+	font-size: 2rem;
+}
+
+nav{
+	padding: 10px 30px;
+	background-color: rgba(255, 255, 255, 0.5);
+	position: sticky;
+	top: 0;
+	width: 100%;
+
+
+}
+
+nav ul{
+	list-style: none;
+	display: table-footer-group;
+    display: flex;
+}
+
+nav ul list-style{
+	font-size: 2rem;
+}
+nav ul li a{
+	font-size: 20px;
+	text-decoration: none;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+}
+
+footer{
+	text-align: center;
+	font-size: 2rem;
+}
+
+
+
+/*selectores de clase*/
+
+.textcenter{
+	text-align: center;
+}
+.textRight{
+	text-align: right;
+}
+.textleft{
+	text-align: left;
+}
+.textRed{
+	color: darkred;
+}
+.textBold{
+	font-weight: 500;
+}
+.bgdark{
+	background-color: rgba(123, 125, 123, 0.5) ;
+}
+.bglight{
+	background-color: rgba(68, 157, 72, 0.8);
+}
+
+/*selector de ID*/
+#nosotros{
+
+}
+/*box model*/
+
+.novedades__articulo{
+	width: 90%;
+	height: auto;
+	
+	margin: 10px auto;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    border: solid 2px navajowhite;
+}
+.pie{
+	padding: 30px 0;
+}
+.pie__icon--sm{
+	width: 50px;
+}
+.pie__titulo--md{
+	font-size: 2rem;
+	text-align: center;
+	display: inline-block;
+}
+/*inicio flex*/
+.botonera{
+position: sticky;
+top: 0;
+padding: 10px 30px;
+display: flex;
+flex direction: flex;
+justify-content: space-between;
+align-items: center;
+flex-grow: flex;
+}
+.botonera ol{
+	display: flex;
+	justify-content: space-between;
+}
+#productos h1
+#productos h2{
+	text-transform: uppercase;
+	font-size: 3rem;
+	text-align: center;
+	padding: 20px 0;
+	background-color: rgba(230, 230, 230, 1.0);
+	font-family: Roboto, sans-serif;
+	margin: 20px 0;
+}
+#productos .galeria{
+	margin: 20px;
+	display: flex;
+	
+}
+	#productos .galeria figure{
+		text-align: center;
+	}
+
+		#productos .galeria figure img{
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+
+		#productos .galeria figure figcaption{
+			font-size: 2.5rem;
+			color: navajowhite ;
+			padding: 10px 0;
+			background-color: black;
+		}
+
+		#productos .galeria p.price{
+			color:navajowhite;
+			padding-bottom: 10px;
+			background-color: black;
+		}
+
+/* Producto destacado del mes*/
+#productos .destacados article{
+	background-color: #ff0004 ;
+	display: flex;
+	
+}
+
+	#productos .destacados article p{
+		font-size: 2rem;
+		line-height: 2.4rem;
+		padding: 50px;
+		margin: 20px auto;
+		color: navajowhite;
+	}
+
+	#productos .destacados article h3{
+		color: white;
+		font-size: 3rem;
+		padding-left: 50px;
+		font-family: Roboto, sans-serif;
+	}
+	.section__1{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.contenedor{
+	display: grid;
+	grid-template-columns: 20% 70% 10%;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "nav nav nav" "header header header" "footer footer footer";
+
+	 }
+	 #header{
+	 	display: grid;
+	 	grid-area: header;
+	 }
+	 #productos{
+	 	display: grid;
+        
+}
+
+	#footer{
+		display: grid;
+
+	}
+	@media only screen and (min-width: 768px){
+body{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 20vh 70vh 10vh;
+}    
+}
+@media only screen and (min-width: 1200px){
+    body{
+grid-template-columns: repeat(2,30%);
+grid-template-rows: 20vh 70vh 10vh;
+    }
+}
+.rotate:hover{
+    transform: rotateZ(90deg);
+    cursor: pointer;
+    transition: transform 3s;
+}
+
+@keyframes animateDiv{
+    2% {width: 400px;}
+    15% {width: 700px;}
+    40% {width: 900px;}
+    85% {width: 500px;}
+    90% {width: 400px;}
+}
+
+.animate{
+background-color:#8e2f2f;
+animation-name: animateDiv;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 7s;
+}
+@keyframes textAlpha{
+    from{opacity: 1;}
+    to{opacity: 7;}
+}
